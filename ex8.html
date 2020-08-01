@@ -17,8 +17,21 @@
       document.write("bookkeeper: "+ coworkers.bookkeeper + "<br>");
       coworkers["data scientist"] ="eunbi";
       document.write("progammer: "+ coworkers["data scientist"] + "<br>");
-
-
+    </script>
+    <h2>Iterate</h2>
+    <script>
+      for (var key in coworkers){
+        document.write(coworkers[key] + "<br>");
+      }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+      coworkers.showAll = function (){
+        for (var key in this){
+          document.write(coworkers[key] + "<br>");
+        }
+      }
+      coworkers.showAll();
     </script>
   </body>
 </html>
