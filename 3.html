@@ -16,36 +16,38 @@
 
     gtag('config', 'UA-160019057-1');
   </script>
-
+  <script>
+    function nightDayHandler (self){
+      var target = document.querySelector('body');
+      var alist = document.querySelectorAll('a');
+      var i =0;
+      var j=0;
+      if(self.value === 'Night' ){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        self.value ='day';
+        while(i<alist.length){
+          alist[i].style.color='red';
+          i=i+1;
+        }
+      }
+      else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        self.value = 'Night'
+        while(j<alist.length){
+          alist[j].style.color='powderblue';
+          j = j+1;
+        }
+      }
+    }
+  </script>
 </head>
 
 
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input type="button" name="" value="Night" onclick="
-    var target = document.querySelector('body');
-    var alist = document.querySelectorAll('a');
-    var i =0;
-    var j=0;
-    if(this.value === 'Night' ){
-      target.style.backgroundColor='black';
-      target.style.color='white';
-      this.value ='day';
-      while(i<alist.length){
-        alist[i].style.color='red';
-        i=i+1;
-      }
-    }
-    else{
-      target.style.backgroundColor='white';
-      target.style.color='black';
-      this.value = 'Night'
-      while(j<alist.length){
-        alist[j].style.color='powderblue';
-        j = j+1;
-      }
-    }
-  ">
+  <input type="button" name="" value="Night" onclick=" nightDayHandler(this);">
 
   <ol>
     <li><a href="1.html">HTML</a></li>
@@ -60,17 +62,6 @@
     Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.[8] JavaScript enables interactive web pages and is an essential part of web applications.
     The vast majority of websites use it for client-side page behavior,[9] and all major web browsers have a dedicated JavaScript engine to execute it.
   </p>
-  <input type="button" name="" value="Night" onclick="
-    if(this.value === 'Night' ){
-      document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('body').style.color='white';
-      this.value ='day';
-    }else{
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';
-      this.value = 'Night'
-    }
-  ">
 
 </body>
 
