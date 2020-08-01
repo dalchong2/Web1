@@ -24,14 +24,26 @@
   <h1><a href="index.html">WEB</a></h1>
   <input type="button" name="" value="Night" onclick="
     var target = document.querySelector('body');
+    var alist = document.querySelectorAll('a');
+    var i =0;
+    var j=0;
     if(this.value === 'Night' ){
       target.style.backgroundColor='black';
       target.style.color='white';
       this.value ='day';
-    }else{
+      while(i<alist.length){
+        alist[i].style.color='red';
+        i=i+1;
+      }
+    }
+    else{
       target.style.backgroundColor='white';
       target.style.color='black';
       this.value = 'Night'
+      while(j<alist.length){
+        alist[j].style.color='powderblue';
+        j = j+1;
+      }
     }
   ">
 
