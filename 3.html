@@ -17,28 +17,36 @@
     gtag('config', 'UA-160019057-1');
   </script>
   <script>
-    function nightDayHandler (self){
-      var target = document.querySelector('body');
+  var Link ={
+    setColor: function (color){
       var alist = document.querySelectorAll('a');
       var i =0;
-      var j=0;
-      if(self.value === 'Night' ){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        self.value ='day';
-        while(i<alist.length){
-          alist[i].style.color='red';
-          i=i+1;
-        }
+      while(i<alist.length){
+        alist[i].style.color=color;
+        i=i+1;
       }
-      else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
+    }
+  }
+  var Body={
+    setColor: function(color){
+      document.querySelector('body').style.color=color;
+    },
+    setBackGroundColor: function (color){
+      document.querySelector('body').style.backgroundColor=color;
+    }
+  }
+
+    function nightDayHandler (self){
+      if (self.value === 'Night') {
+        Body.setBackGroundColor('black');
+        Body.setColor('white');
+        self.value ='day';
+        Link.setColor('powderblue');
+      }else{
+        Body.setBackGroundColor('white');
+        Body.setColor('black');
         self.value = 'Night'
-        while(j<alist.length){
-          alist[j].style.color='powderblue';
-          j = j+1;
-        }
+        Link.setColor('red');
       }
     }
   </script>
