@@ -52,7 +52,7 @@ function initialiseShaders() {
     var fragmentShaderSource = '\
 			void main(void) \
 			{ \
-				gl_FragColor = vec4(1.0, 0.55, 0.66, 1.0); \
+				gl_FragColor = vec4(0.8, 0.8, 0.8, 1.0); \
 			}';
 
     // Create the fragment shader object
@@ -120,10 +120,18 @@ function initialiseShaders() {
     return testGLError("initialiseShaders");
 }
 
+var r, g, b =0;
+var depth_clear_value = 1.0; 
+
+function background(){
+    r = document.getElementById('r').value;
+    g = document.getElementById('g').value;
+    b = document.getElementById('b').value;
+}
+
 function renderScene() {
     
-    gl.clearColor(0.5, 0.8, 0.4, 1.0);
-
+    gl.clearColor(r, g, b, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     // Get the location of the transformation matrix in the shader using its name
