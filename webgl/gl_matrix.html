@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gl_matrix</title>
+    <script type="text/javascript" src="../js/gl-matrix.js"></script>
+    <script type="text/javascript" src="../js/transform.js"></script>
+</head>
+
+<body onload="main()">
+    <p>
+        gl_matrix에서 vec3와 mat4를 사용한다.
+
+    </p>
+    <hr><br>
+    <canvas id="helloapicanvas" style="border: none;" width="600" height="600"></canvas>
+    <br><br>
+    <button onclick="toggleAnimation()">Toggle Animation</button>
+    <br><hr>
+    <button onclick="speed_plus()">plus</button>
+    <button onclick="speed_minus()">minus</button>
+    <br><hr>
+    <button onclick="draw_mode_point()">point</button>
+    <button onclick="draw_mode_line()">line</button>
+    <button onclick="draw_mode_triangle()">triangle</button>
+
+</body>
+</html>
