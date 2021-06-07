@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>WebGL 1.0 Tutorial 05 Shader Programming</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+    <script type="text/javascript" src="../js/shader.js">
+    </script>
+
+
+</head>
+
+<body onload="main()">
+    <h1>Shader Programming</h1>
+    <p>Fragment shader은 모든 픽셀에 대해 색상을 결정한다. 여기에서 if문 잘못 사용하면 성능이 매우 떨어진다.</p>
+    <p>Change 버튼을 누르면 Shader을 변경할 수 있다. 그러나 Shader을 자주 변경하는 것은 성능에 영향을 미친다.</p>
+    <hr><br>
+    <canvas id="helloapicanvas" style="border: none;" width="800" height="600"></canvas>
+    <br><br>
+    <button onclick="change()" >Change</button>
+</body>
+
+</html>
